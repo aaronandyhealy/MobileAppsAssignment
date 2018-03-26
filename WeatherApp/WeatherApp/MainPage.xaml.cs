@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using static WeatherApp.WeatherMap;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -27,9 +28,11 @@ namespace WeatherApp
             this.InitializeComponent();
         }
       
-        private void Button_Click(Object sender, RoutedEventArgs e)
+        private async void Button_Click(Object sender, RoutedEventArgs e)
         {
+            RootObject myWeather = await WeatherMap.GetWeather(20.0, 30.0);
 
+            ResultTextBlock.Text = myWeather.name + " - " + myWeather.main.temp + " - " + myWeather.weather[0].description;
         }
     }
 }
