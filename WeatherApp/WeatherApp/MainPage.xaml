@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="Green">
+    <StackPanel Background="HotPink">
         <Button Content="Get Local Weather" Click="Button_Click" />
-        <TextBlock  Name="ResultTextBlock"      />             
+        <TextBlock  Name="ResultTextBlock" />             
      </StackPanel>
 </Page>

@@ -189,3 +189,6 @@ C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\obj\x86\Debug\quali
 C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\bin\x86\Debug\Core\AppxManifest.xml
+C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\bin\x86\Debug\Core\WeatherApp.exe
+C:\Users\Aaron Healy\Desktop\MobileApp\WeatherApp\WeatherApp\bin\x86\Debug\WeatherApp.build.appxrecipe
