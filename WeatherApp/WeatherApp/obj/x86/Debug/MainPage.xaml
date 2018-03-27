@@ -9,7 +9,8 @@
 
     <StackPanel Background="HotPink">
         <Button x:ConnectionId='1' Content="Get Local Weather"                      />
-        <TextBlock x:ConnectionId='2'  Name="ResultTextBlock" />             
-     </StackPanel>
+        <TextBlock x:ConnectionId='2'  Name="ResultTextBlock" />
+        <Image x:ConnectionId='3' Name="ResultImage" Width="200" Height="200" />
+    </StackPanel>
 </Page>
 

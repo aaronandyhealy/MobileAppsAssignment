@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using static WeatherApp.App.WeatherMap;
 
@@ -32,7 +33,8 @@ namespace WeatherApp
         private async void Button_Click(Object sender, RoutedEventArgs e)
         {
             RootObject myWeather = await App.WeatherMap.GetWeather(20.0, 30.0);
-
+            String icon = String.Format("http://openweathermap.org/img/w/{0}.png", myWeather.weather[0].icon);
+            ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
             ResultTextBlock.Text = myWeather.name + " - " + myWeather.main.temp + " - " + myWeather.weather[0].description;
         }
     }
