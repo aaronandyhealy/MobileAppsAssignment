@@ -32,7 +32,9 @@ namespace WeatherApp
       
         private async void Button_Click(Object sender, RoutedEventArgs e)
         {
-            RootObject myWeather = await App.WeatherMap.GetWeather(20.0, 30.0);
+            var position = await LocationManager.GetPosition();
+
+            RootObject myWeather = await App.WeatherMap.GetWeather(position.Coordinate.Latitude,position.Coordinate.Longitude);
             String icon = String.Format("http://openweathermap.org/img/w/{0}.png", myWeather.weather[0].icon);
             ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
             ResultTextBlock.Text = myWeather.name + " - " + myWeather.main.temp + " - " + myWeather.weather[0].description;
