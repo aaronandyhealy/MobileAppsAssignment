@@ -8,9 +8,11 @@
     mc:Ignorable="d">
 
     <StackPanel Background="HotPink">
-        <Button x:ConnectionId='1' Content="Get Local Weather"                      />
-        <TextBlock x:ConnectionId='2'  Name="ResultTextBlock" />
-        <Image x:ConnectionId='3' Name="ResultImage" Width="200" Height="200" />
+        <Button x:ConnectionId='1' Content="Get Local Weather"                      HorizontalAlignment="Center"/>
+        <Image x:ConnectionId='2' Name="ResultImage" Width="209" Height="111" HorizontalAlignment="Center" />
+        <TextBlock x:ConnectionId='3'  x:Name="LocationTextBlock" FontSize="38" Foreground="White"/>
+        <TextBlock x:ConnectionId='4'  x:Name="WeatherTextBlock" FontSize="38" Foreground="White"/>
+        <TextBlock x:ConnectionId='5'  x:Name="TempTextBlock" FontSize="38" Foreground="White"/>
     </StackPanel>
 </Page>
 

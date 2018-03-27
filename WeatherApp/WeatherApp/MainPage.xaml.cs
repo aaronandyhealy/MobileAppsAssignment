@@ -35,9 +35,13 @@ namespace WeatherApp
             var position = await LocationManager.GetPosition();
 
             RootObject myWeather = await App.WeatherMap.GetWeather(position.Coordinate.Latitude,position.Coordinate.Longitude);
-            String icon = String.Format("http://openweathermap.org/img/w/{0}.png", myWeather.weather[0].icon);
+            String icon = String.Format("ms-appx:///Assets/Weather/{0}.png", myWeather.weather[0].icon);
             ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-            ResultTextBlock.Text = myWeather.name + " - " + myWeather.main.temp + " - " + myWeather.weather[0].description;
+            LocationTextBlock.Text = myWeather.name;
+            TempTextBlock.Text = ((int)(myWeather.main.temp - 273.15)).ToString();
+            WeatherTextBlock.Text = myWeather.weather[0].description;
+
         }
+
     }
 }
