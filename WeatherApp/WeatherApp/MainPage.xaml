@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="HotPink">
-        <Button Content="Get Local Weather" Click="Button_Click" HorizontalAlignment="Center"/>
-        <Image Name="ResultImage" Width="209" Height="111" HorizontalAlignment="Center" />
+    <StackPanel Background="Yellow">
+        <Button Content="Get Local Weather" Click="Button_Click" HorizontalAlignment="Center" Margin="110,0,109,0"/>
+        <Image x:Name="ResultImage" Width="209" Height="111" HorizontalAlignment="Center" />
         <TextBlock  x:Name="LocationTextBlock" FontSize="38" Foreground="White"/>
         <TextBlock  x:Name="WeatherTextBlock" FontSize="38" Foreground="White"/>
         <TextBlock  x:Name="TempTextBlock" FontSize="38" Foreground="White"/>
