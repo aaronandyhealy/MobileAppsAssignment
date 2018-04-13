@@ -27,20 +27,27 @@ namespace WeatherApp
             this.InitializeComponent();
         }
       
+     
+        //On button click to get weather
         private async void Button_Click(Object sender, RoutedEventArgs e)
         {
+            //Call LocationManager Class Get Position Function
             var position = await LocationManager.GetPosition();
 
-            RootObject myWeather = await App.WeatherMap.GetWeather(position.Coordinate.Latitude,position.Coordinate.Longitude);
+            //Get results depending on current latitude and longitude
+            RootObject myWeather = await App.WeatherMap.GetWeather(position.Coordinate.Latitude, position.Coordinate.Longitude);
             String icon = String.Format("ms-appx:///Assets/Weather/{0}.png", myWeather.weather[0].icon);
             ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-            LocationTextBlock.Text = myWeather.name;
-            TempTextBlock.Text = ((int)(myWeather.main.temp - 273.15)).ToString();
-            WeatherTextBlock.Text = myWeather.weather[0].description;
+            LocationTextBlock.Text = "Location: " + myWeather.name;
+            TempTextBlock.Text = "Temperature: " + ((int)(myWeather.main.temp - 273.15)).ToString() + "c";
+            HumidityTextBlock.Text = "Humidity: " + ((int)(myWeather.main.humidity)).ToString();
+            WindTextBlock.Text = "Wind Speed: " + ((int)(myWeather.wind.speed * 3.6)).ToString() + "km/h";
+            WeatherTextBlock.Text = "Weather: " + myWeather.weather[0].description;
 
         }
 
-      
+
+
 
     }
 }

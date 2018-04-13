@@ -22,17 +22,13 @@ using System.Threading.Tasks;
 
 namespace WeatherApp
 {
-    /// <summary>
-    /// Provides application-specific behavior to supplement the default Application class.
-    /// </summary>
+   
     sealed partial class App : Application
     {
-        /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
-        public class WeatherMap
+
+       public class WeatherMap
         {
+            //Get Weather Function
             public async static Task<RootObject> GetWeather(double lat, double lon)
             {
                 var http = new HttpClient();
@@ -85,22 +81,8 @@ namespace WeatherApp
                 public double temp { get; set; }
 
                 [DataMember]
-                public double pressure { get; set; }
-
-                [DataMember]
                 public int humidity { get; set; }
-
-                [DataMember]
-                public double temp_min { get; set; }
-
-                [DataMember]
-                public double temp_max { get; set; }
-
-                [DataMember]
-                public double sea_level { get; set; }
-
-                [DataMember]
-                public double grnd_level { get; set; }
+              
             }
 
             [DataContract]
@@ -110,8 +92,6 @@ namespace WeatherApp
                 [DataMember]
                 public double speed { get; set; }
 
-                [DataMember]
-                public int deg { get; set; }
             }
 
             [DataContract]
@@ -131,11 +111,6 @@ namespace WeatherApp
                 [DataMember]
                 public string country { get; set; }
 
-                [DataMember]
-                public int sunrise { get; set; }
-
-                [DataMember]
-                public int sunset { get; set; }
             }
 
             [DataContract]
@@ -177,11 +152,8 @@ namespace WeatherApp
             }
 
         }
+       
 
-        /// <summary>
-        /// Invoked when the application is launched normally by the end user.  Other entry points
-        /// will be used such as when the application is launched to open a specific file.
-        /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {

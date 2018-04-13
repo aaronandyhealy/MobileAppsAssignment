@@ -7,12 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="Yellow">
-        <Button x:ConnectionId='1' Content="Get Local Weather"                      HorizontalAlignment="Center" Margin="110,0,109,0"/>
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="LightCoral" />
+        </Style>
+    </Page.Resources>
+
+
+
+    <StackPanel Background="Red">
+        <Button x:ConnectionId='1' Content="Get Local Weather"                      HorizontalAlignment="Center" Width="360"/>
         <Image x:ConnectionId='2' x:Name="ResultImage" Width="209" Height="111" HorizontalAlignment="Center" />
         <TextBlock x:ConnectionId='3'  x:Name="LocationTextBlock" FontSize="38" Foreground="White"/>
         <TextBlock x:ConnectionId='4'  x:Name="WeatherTextBlock" FontSize="38" Foreground="White"/>
         <TextBlock x:ConnectionId='5'  x:Name="TempTextBlock" FontSize="38" Foreground="White"/>
+        <TextBlock x:ConnectionId='6'  x:Name="WindTextBlock" FontSize="38" Foreground="White"/>
+        <TextBlock x:ConnectionId='7'  x:Name="HumidityTextBlock" FontSize="38" Foreground="White"/>
     </StackPanel>
 </Page>
 
